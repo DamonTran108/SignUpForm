@@ -1,0 +1,215 @@
+.html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+
+  .container {
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    min-width: 0;
+}
+
+
+  @media only screen and (max-width: 600px) {
+
+    .form-container > .form-header {
+          
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: royalblue;
+      
+          
+          font-size: 1.5em;
+          font-style: bold;
+         
+      
+          min-width: 0;
+      }
+    
+      .form-header p {
+              
+        margin-left: 1em;
+        width: 65%;
+        
+    }
+
+    span {
+
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form-column-1, .form-column-2 {
+       
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        flex-wrap: wrap;
+       
+        
+    }
+    
+    .sidebar img {
+       
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+       
+    }
+    .footer {
+        flex:0.5;
+        background-color: grey;
+    }
+    
+    
+    form label {
+    
+        margin-left: auto;
+        margin-right: auto;
+    
+     
+    }
+
+
+    form input[type = 'text'],
+    form input[type = 'email'],
+    form input[type = 'password']{
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+
+    
+  
+}
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+    .container {
+      
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        min-width: 0;
+    }
+
+    .sidebar {
+
+        display: flex;
+        width: 25%;
+       
+      
+      }
+      
+      form {
+     
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        
+      
+          margin-left: 100px;
+          align-items: center;
+          margin-bottom: 200px;
+          
+         
+      }
+      
+      
+      .form-container {
+      
+          display: flex;
+          flex-direction: column;
+          gap:20px;
+          width: 75%;
+          flex-wrap: wrap;
+          
+         
+      }
+      
+      span{
+       
+          margin-left: 100px;
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 50px;
+          
+      }
+      
+      .form-container > .form-header {
+          
+        flex:0.5;
+      
+        background-color: royalblue;
+      
+          
+          font-size: 3em;
+         
+      
+          min-width: 0;
+      }
+      
+      .form-header p {
+          
+          margin-left: 1em;
+          width: 65%;
+          
+      }
+      
+      .form-column-1, .form-column-2 {
+          flex:0.5;
+          display: flex;
+          flex-direction: column;
+          gap:10px;
+          flex-wrap: wrap;
+          margin-left: auto;
+          margin-right: auto;
+      
+          
+      }
+
+
+      .sidebar img {
+         
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+         
+         
+      }
+      .footer {
+          flex:0.5;
+          background-color: grey;
+      }
+
+      form input[type = 'text'],
+      form input[type = 'email'],
+      form input[type = 'password']{
+
+        width: 500px;
+  
+       
+      }
+      
+}
