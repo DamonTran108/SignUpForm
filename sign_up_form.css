@@ -1,7 +1,27 @@
+
+@font-face {
+    font-family: "roboto";
+    src: url("Fragile\ Bombers.otf")
+}
+
+
+
+
 .html,
 body {
   margin: 0;
   padding: 0;
+
+  color:#00f715;
+  font-family:  "roboto";
+
+
+}
+
+button {
+
+    font-family:  "roboto";
+
 }
 
 
@@ -13,29 +33,192 @@ body {
 
   .container {
     display: flex;
-
+    position: absolute;
     height: 100%;
     width: 100%;
     flex-direction: column;
     min-width: 0;
+
+
+}
+
+p {
+    animation-duration: 5s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+  
+  
+
+button {
+
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 8px;
+    align-items: center;
+    height:50px;
+    width:200px;
+
+    font-size: 2em;
+    border : 1px solid #00f715;
+    background-color: transparent;
+    color: #00f715;
+  }
+
+
+  .footer {
+
+    flex:1;
+    display: flex;
+    gap : 20px;
+  }
+
+
+  span {
+    display: flex;
+    font-weight: bold;
+
+    font-size: 3em;
+  }
+
+
+
+
+  form label {
+    
+    font-size: 2em;
+    
+ 
 }
 
 
-  @media only screen and (max-width: 600px) {
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.form-column-1 input:focus, .form-column-2 input:focus {
+  background-color: #2ac237;
+
+  animation: blinker 1s linear infinite;
+
+
+}
+
+
+
+.form-container {
+   
+    background-color: black;
+ 
+   
+}
+
+.form-container > .form-header {
+          
+
+    
+    background-color: black;
+  
+     margin-left: 100px;
+  }
+
+
+.sidebar {
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+   
+    
+}
+
+.image-banner {
+    
+    opacity: 0.5;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 15%;
+    object-fit: cover;
+
+  
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+
+.error.active {
+  padding: 0.3em;
+}
+
+.form-border{
+
+
+ flex:1;
+  display: flex;
+  flex-direction: column;
+  gap:50px;
+
+ 
+
+}
+
+
+
+
+  @media only screen and (max-width: 665px) {
+    
 
     .form-container > .form-header {
           
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: royalblue;
+     
       
           
-          font-size: 1.5em;
-          font-style: bold;
+        font-size: 1.5em;
+        font-style: bold;
          
       
-          min-width: 0;
+        min-width: 0;
+       
+          
       }
     
       .form-header p {
@@ -47,7 +230,7 @@ body {
 
     span {
 
-        font-weight: bold;
+      
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,20 +243,15 @@ body {
         gap:10px;
         flex-wrap: wrap;
        
+       
         
     }
     
-    .sidebar img {
-       
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-       
-       
-    }
     .footer {
+        margin-top: 50px;
         flex:0.5;
-        background-color: grey;
+        background-color: black;
+        font-size: 3em;
     }
     
     
@@ -89,41 +267,90 @@ body {
     form input[type = 'text'],
     form input[type = 'email'],
     form input[type = 'password']{
-
-        margin-left: 10px;
-        margin-right: 10px;
+      color:whitesmoke;
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 250px;
+        background-color: transparent;
+        border: 1px solid #00f715;
+        border-radius: 3px;
     }
+
+
+    button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+    .form-container {
+        
+        margin-bottom: 200px;
+        
+       
+      }
+
+      .image {
+        
+      
+      }
+       
+     .image-banner {
+        position: absolute;
     
+    
+        top:200px;
+
+      }
+
+      span.error {
+        margin-left: auto;
+        margin-right: auto;
+       
+        width: 50%;
+      }
+
+      .form-border{
+
 
     
+          align-items: center;
+      
+      }
+      
+
   
 }
 
 
+* {margin: 0; padding: 0}
+body {background: #000;}
+canvas {display: block;}
 
-
-
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 666px) {
     .container {
       
+        
         flex-direction: row;
         height: 100%;
         width: 100%;
         flex-wrap: wrap;
-        min-width: 0;
+       
     }
 
     .sidebar {
 
+        flex:1;
+        position: relative;
         display: flex;
-        width: 25%;
-       
+        width: 35%;
+        height: 100%;    
       
       }
       
       form {
-     
+            
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
@@ -131,43 +358,64 @@ body {
       
           margin-left: 100px;
           align-items: center;
-          margin-bottom: 200px;
-          
+        
+          border: 1px solid #00f715;
          
+
+          padding: 30px;
+          width: 100%;
+          height: 100%;
+          gap:50px;
+    
       }
       
       
       .form-container {
-      
+           position: relative;
           display: flex;
           flex-direction: column;
           gap:20px;
-          width: 75%;
-          flex-wrap: wrap;
-          
+          width: 65%;
+          background-color: #000000;
+         flex-wrap:wrap;
+         margin-right: 20%;
          
       }
       
       span{
-       
+        margin-left: 100px;
+      }
+      
+      .footer{
+          flex:1;
           margin-left: 100px;
           display: flex;
+          flex-wrap: wrap;
           justify-content: flex-start;
-          margin-top: 50px;
+          margin-top: 10px;
+          font-size: 3rem;
+      
           
       }
       
       .form-container > .form-header {
-          
+
+        
+       
+   
         flex:0.5;
-      
-        background-color: royalblue;
-      
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        align-items: flex-start;
+        justify-content: center;
           
-          font-size: 3em;
-         
+        font-size: 1.5rem;
+        
+         min-height: 0;
       
-          min-width: 0;
+        min-width: 0;
+        
       }
       
       .form-header p {
@@ -178,38 +426,83 @@ body {
       }
       
       .form-column-1, .form-column-2 {
-          flex:0.5;
+          flex:0.75;
           display: flex;
           flex-direction: column;
           gap:10px;
           flex-wrap: wrap;
-          margin-left: auto;
-          margin-right: auto;
-      
+          justify-content: flex-start;
+          justify-content: center;
+          align-items: center;
           
       }
 
 
-      .sidebar img {
-         
+   .image {
+          position: absolute;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-         
+     
+          background-size: cover;
+          
          
       }
+
       .footer {
+          display: flex;
+          margin-top: auto;
           flex:0.5;
-          background-color: grey;
+          background-color: #000000;
+        
+          align-items: flex-start;
+          justify-content: flex-start;
+ 
       }
 
       form input[type = 'text'],
       form input[type = 'email'],
       form input[type = 'password']{
+        
+        color:whitesmoke;
 
-        width: 500px;
-  
+        width: 250px;
+        background-color: transparent;
+        border: 1px solid #00f715;
+        border-radius: 3px;
        
       }
+
+      .image-banner {
+    
+        opacity: 0.5;
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        height: 15%;
+    
+      
+    }
+    
+    .form-column-1 > span.error , .form-column-2 > span.error{
+      position: relative;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      width: 200px;
+
+     
+      
+    }
+
+    
+
+
+      
       
 }
+
